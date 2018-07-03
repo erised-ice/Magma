@@ -19,7 +19,7 @@
 }
 
 .body {
-    font-family: ArialRegular, monospace;
+    font-family: ArialRegular, Arial, tahoma, sans-serif;
     color: #393939;
     font-size: 14px;
 }
@@ -32,20 +32,21 @@
 }
 
 .header__inner {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 24px;
-    margin-bottom: 29px;
+    padding: 24px 20px 24px;
 }
 
 .header__logo {
     width: 100%;
     max-width: 153px;
+    font-size: 0;
 }
 
 .img {
-    w100p;
+    width: 100%;
 }
 
 .header__info {
@@ -54,7 +55,8 @@
     align-items: center;
 }
 
-.info__item {
+.header__language,
+.header__search {
     display: inline-block;
 }
 
@@ -65,6 +67,7 @@
 
 .language__item {
     text-transform: uppercase;
+    display: inline-block;
 }
 
 .language__item--active {
@@ -91,13 +94,15 @@
 .search__button {
     width: 100%;
     max-width: 68px;
+    height: 67px;
     mix-blend-mode: darken;
     position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
     top: 4px;
     left: -12px;
-}
-
-.search__button {
+    background: url('../img/template/loupe.png') no-repeat;
 }
 
 .phone__item {
@@ -105,10 +110,22 @@
     color: #393939;
     font-size: 24px;
     text-decoration: none;
+    font-family: ArialRegular, Arial, tahoma, sans-serif;
 }
 
 .phone__item--blue {
     color: #006dba;
 }
 
+@media (min-width: 1024px) {
+    .language__item:hover {
+        text-decoration: none;
+    }
+
+    .header__logo:hover,
+    .search__button:hover,
+    .phone__item:hover {
+        opacity: 0.9;
+    }
+}
 
