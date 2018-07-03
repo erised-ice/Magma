@@ -19,8 +19,113 @@
 }
 
 .body {
-    font-family: ArialRegular;
+    font-family: ArialRegular, Arial, tahoma, sans-serif;
     color: #393939;
     font-size: 14px;
+}
+
+.inner {
+    width: 100%;
+    max-width: 1010px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header__inner {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px 24px;
+}
+
+.header__logo {
+    width: 100%;
+    max-width: 153px;
+    font-size: 0;
+}
+
+.img {
+    width: 100%;
+}
+
+.header__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__language,
+.header__search {
+    display: inline-block;
+}
+
+.link {
+    color: #006dba;
+    font-family: ArialRegular, monospace;
+}
+
+.language__item {
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.language__item--active {
+    color: #ffffff;
+    background: #006dba;
+    padding: 6px 8px;
+    border: 1px solid #76c0e4;
+    border-radius: 8px;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+    margin-left: 58px;
+}
+
+.search__input {
+    border-radius: 4px;
+    width: 100%;
+    max-width: 204px;
+    padding: 3px;
+}
+
+.search__button {
+    width: 100%;
+    max-width: 68px;
+    height: 67px;
+    mix-blend-mode: darken;
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    top: 4px;
+    left: -12px;
+    background: url('../img/template/loupe.png') no-repeat;
+}
+
+.phone__item {
+    display: block;
+    color: #393939;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: ArialRegular, Arial, tahoma, sans-serif;
+}
+
+.phone__item--blue {
+    color: #006dba;
+}
+
+@media (min-width: 1024px) {
+    .language__item:hover {
+        text-decoration: none;
+    }
+
+    .header__logo:hover,
+    .search__button:hover,
+    .phone__item:hover {
+        opacity: 0.9;
+    }
 }
 
